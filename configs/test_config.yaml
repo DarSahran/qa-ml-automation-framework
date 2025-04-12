@@ -1,0 +1,16 @@
+# configs/test_config.yaml
+
+data_validation:
+  required_columns:
+    - customer_id
+    - age
+    - country
+    - signup_date
+    - churned
+  max_null_percentage: 5
+  expected_dtypes:
+    customer_id: int64
+    age: int64
+    country: object
+    signup_date: object
+    churned: int64
