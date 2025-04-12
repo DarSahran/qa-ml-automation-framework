@@ -17,7 +17,7 @@ def test_model_training_runs():
 
 def test_accuracy_above_threshold():
     accuracy = train_model()
-    assert accuracy >= 0.65, f"Model accuracy {accuracy:.2f} below expected threshold of 0.6"
+    assert accuracy >= 0.65, f"Model accuracy {accuracy:.2f} below expected threshold of 0.65"
 
 def test_model_file_created():
     model_path = "models/model.pkl"

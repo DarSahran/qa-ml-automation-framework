@@ -9,8 +9,21 @@ import joblib
 def train_model(data_path="data/sample_data.csv", model_path="models/model.pkl", random_state=42):
     df = pd.read_csv(data_path)
     
-    X = df[["age"]]  # Minimal feature for now
+    from sklearn.preprocessing import LabelEncoder
+
+    # Initialize the label encoder
+    label_encoder = LabelEncoder()
+
+    # Encode the 'country' column
+    df['country'] = label_encoder.fit_transform(df['country'])
+
+    # Update X with the encoded 'country' column
+    X = df[["age", "country"]]
     y = df["churned"]
+
+    
+    
+    
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=random_state)
 
