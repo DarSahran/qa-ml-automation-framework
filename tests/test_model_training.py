@@ -1,5 +1,3 @@
-# tests/test_model_training.py
-
 import sys
 import os
 
@@ -7,9 +5,7 @@ import os
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, ROOT)
 
-# Now import works
 from scripts.train import train_model
-import os
 
 def test_model_training_runs():
     accuracy = train_model()
@@ -23,3 +19,8 @@ def test_model_file_created():
     model_path = "models/model.pkl"
     train_model(model_path=model_path)
     assert os.path.exists(model_path), "Model file not found after training."
+
+def test_feature_names_file_created():
+    feature_path = "models/feature_names.pkl"
+    train_model()
+    assert os.path.exists(feature_path), "Feature names file not found after training."
