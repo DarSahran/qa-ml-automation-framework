@@ -5,7 +5,7 @@ import yaml
 import pytest
 
 CONFIG_PATH = "configs/test_config.yaml"
-DATA_PATH = "data/sample_data.csv"  # You'll create this later for testing
+DATA_PATH = "data/Telco_Customer_Churn.csv"  # You'll create this later for testing
 
 @pytest.fixture(scope="module")
 def config():

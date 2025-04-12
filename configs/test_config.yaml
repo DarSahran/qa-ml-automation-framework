@@ -1,16 +1,23 @@
-# configs/test_config.yaml
-
 data_validation:
   required_columns:
-    - customer_id
-    - age
-    - country
-    - signup_date
-    - churned
+    - customerID
+    - gender
+    - SeniorCitizen
+    - Partner
+    - Dependents
+    - tenure
+    - PhoneService
+    - InternetService
+    - Contract
+    - MonthlyCharges
+    - TotalCharges
+    - Churn
   max_null_percentage: 5
   expected_dtypes:
-    customer_id: int64
-    age: int64
-    country: object
-    signup_date: object
-    churned: int64
+    customerID: object
+    gender: object
+    SeniorCitizen: int64
+    tenure: int64
+    MonthlyCharges: float64
+    TotalCharges: object
+    Churn: object
