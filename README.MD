@@ -15,6 +15,7 @@ A CI/CD-integrated QA automation framework for validating machine learning pipel
 - 📁 Modular code: `scripts/`, `tests/`, `configs/`
 - 🔀 Fully integrated with GitHub Actions for CI automation
 - 💾 Synthetic + real-world dataset support (Telco Customer Churn)
+- 📊 Interactive UI layout inspired by Power BI / Tableau
 
 ---
 
@@ -104,6 +105,18 @@ This project uses the **Telco Customer Churn Dataset** — a real-world dataset 
 Use case: Predict behavior to retain customers, and analyze churn patterns using explainable ML.
 
 ---
+
+
+## 📷 Sample Dashboard Views
+
+### 🔮 Dashboard Prediction Output
+![Prediction](./images/Prediction.png)
+
+### 📋 Sidebar Input Controls
+![Sidebar](./images/Sidebar.png) 
+
+### ✅ CI/CD Test Validation
+![Tests Passed](./images/test_passed_9.png) 
 
 ## 📈 CI/CD Automation
 
